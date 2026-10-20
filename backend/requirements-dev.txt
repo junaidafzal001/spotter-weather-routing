@@ -1,0 +1,7 @@
+-r requirements.txt
+
+# Testing / local development
+pytest>=9,<10
+pytest-django>=4.14,<5
+respx>=0.23,<1
+ruff>=0.14

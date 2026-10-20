@@ -1,0 +1,5 @@
+-r requirements.txt
+gunicorn>=23,<24
+whitenoise>=6.9,<7
+django-redis>=6,<7
+redis>=6,<7

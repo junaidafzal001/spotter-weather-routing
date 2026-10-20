@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+  --color-canvas: #f3f5f9;
+  --color-surface: #ffffff;
+  --color-line: #e3e8ef;
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+
+  --color-brand: #1d4ed8;
+  --color-brand-dark: #172554;
+  --color-brand-soft: #eef4ff;
+
+  --color-risk-low: #16a34a;
+  --color-risk-moderate: #eab308;
+  --color-risk-high: #f97316;
+  --color-risk-severe: #dc2626;
+  --color-risk-notravel: #7f1d1d;
+  --color-risk-unknown: #9ca3af;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Thin, unobtrusive scrollbars for panels */
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+.scroll-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* MapLibre popup restyling */
+.maplibregl-popup-content {
+  border-radius: 12px;
+  padding: 0;
+  box-shadow:
+    0 12px 32px -12px rgb(15 23 42 / 0.35),
+    0 0 0 1px rgb(15 23 42 / 0.06);
+  overflow: hidden;
+  font-family: var(--font-sans);
+}
+.maplibregl-popup-close-button {
+  padding: 4px 8px;
+  font-size: 16px;
+  color: #64748b;
+}
+.maplibregl-ctrl-attrib {
+  font-size: 10px;
+}
+
+/* Hour slider */
+input[type="range"].slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #bfdbfe, #1d4ed8);
+  outline: none;
+}
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 3px solid #1d4ed8;
+  box-shadow: 0 1px 4px rgb(15 23 42 / 0.25);
+  cursor: pointer;
+}
+input[type="range"].slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 3px solid #1d4ed8;
+  cursor: pointer;
+}
+
+/* Subtle entrance for cards (respects reduced motion) */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-rise {
+  animation: rise 0.25s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise {
+    animation: none;
+  }
+}

@@ -1,0 +1,10 @@
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+exclude = [".venv", "staticfiles", "__pycache__", ".pytest_cache"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+# Settings star-imports are the standard Django pattern; en dashes are
+# intentional typography in prose/docstrings.
+ignore = ["F403", "F405", "RUF001", "RUF002", "RUF003"]

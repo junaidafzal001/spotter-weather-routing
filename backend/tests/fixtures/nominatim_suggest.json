@@ -1,0 +1,27 @@
+[
+ {
+  "display_name": "Chicago, Cook County, Illinois, United States",
+  "lat": 41.8781,
+  "lon": -87.6298
+ },
+ {
+  "display_name": "Chicago Heights, Cook County, Illinois, United States",
+  "lat": 41.5075,
+  "lon": -87.5065
+ },
+ {
+  "display_name": "Chicago Ridge, Cook County, Illinois, United States",
+  "lat": 41.7014,
+  "lon": -87.7734
+ },
+ {
+  "display_name": "Chicago Loop, Chicago, Cook County, Illinois, United States",
+  "lat": 41.782,
+  "lon": -87.75
+ },
+ {
+  "display_name": "West Chicago, DuPage County, Illinois, United States",
+  "lat": 41.8864,
+  "lon": -88.1945
+ }
+]
