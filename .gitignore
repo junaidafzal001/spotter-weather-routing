@@ -15,16 +15,14 @@ coverage/
 .vite/
 
 # Env / secrets
-.env
-.env.local
 .env.*.local
 
 # OS / editors
 .DS_Store
 .idea/
-.vscode/
 *.log
 
 # Playwright / test artefacts
 test-results/
 playwright-report/
+config.bat
