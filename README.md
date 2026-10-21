@@ -15,10 +15,6 @@ Given an origin, destination, departure time, load weight, and a 10/25/50-mile c
 
 The UI adds an interactive MapLibre map (risk-colored route segments, checkpoint popups, recommendation highlighting) and a **0–48 hour corridor weather heatmap** with a synchronized forecast slider.
 
-![Planner](docs/images/planner.png)
-
-![Dashboard with routes and heatmap](docs/images/dashboard-map.png)
-
 ---
 
 ## Contents
@@ -35,7 +31,6 @@ The UI adds an interactive MapLibre map (risk-colored route segments, checkpoint
 - [Project structure](#project-structure)
 - [Key design decisions](#key-design-decisions)
 - [Assumptions & limitations](#assumptions--limitations)
-- [Documentation](#documentation)
 
 ---
 
@@ -369,7 +364,6 @@ spotter-weather-routing/
 │   │   ├── hooks/ lib/ test/    # queries, API client, formatters, risk utilities
 │   │   └── types.ts
 │   ├── Dockerfile / nginx.conf / vercel.json
-├── docs/                        # architecture, walkthrough, requirements checklist
 ├── docker-compose.yml
 ├── render.yaml
 ├── .env.example
@@ -392,8 +386,6 @@ spotter-weather-routing/
 
 **Heatmap time semantics.** The slider is anchored at "now" (0–48 h lead time). Each position uses the forecast for its own timestamp — never one fixed timestamp reused. This is deliberately separate from checkpoint ETA weather, which drives route risk.
 
-See [docs/architecture.md](docs/architecture.md) for the full design and math.
-
 ---
 
 ## Assumptions & limitations
@@ -407,12 +399,6 @@ See [docs/architecture.md](docs/architecture.md) for the full design and math.
 - **Fixture data:** static provider fixtures exist only under `backend/tests/` and are never served by the API or shown in the UI.
 
 ---
-
-## Documentation
-
-- [Architecture & algorithms](docs/architecture.md) — routing, checkpoints, ETA, weather selection, risk rules, exposure, ranking, heatmap, caching.
-- [Walkthrough script](docs/walkthrough.md) — a 5–10 minute Loom demo plan.
-- [Requirements checklist](docs/requirements-checklist.md) — requirement-by-requirement mapping with verification.
 
 ## Data attribution
 

@@ -180,17 +180,6 @@ export default function App() {
           )}
         </section>
       </main>
-
-      <footer className="border-t border-line bg-white/70 px-4 py-3 lg:px-6">
-        <div className="mx-auto flex max-w-[1600px] flex-col gap-1 text-[10px] leading-relaxed text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            Data: Open-Meteo forecasts · OpenRouteService / OSRM routing · Nominatim geocoding · OpenFreeMap tiles.
-          </p>
-          <p>
-            Weather risk is advisory. Verify bridge clearance, axle limits, and road-weight restrictions before dispatch.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
